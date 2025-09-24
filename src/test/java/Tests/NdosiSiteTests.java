@@ -7,4 +7,9 @@ public class NdosiSiteTests extends Base {
     public void HomePageIsDisplayedTest() {
         homeScreen.verifyHomeScreenIsDisplayed();
     }
+
+    @Test(dependsOnMethods = "HomePageIsDisplayedTest")
+    public void TestForClickingLearningMaterial(){
+        homeScreen.clickOnLearningMaterial();
+    }
 }

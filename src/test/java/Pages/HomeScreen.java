@@ -15,6 +15,9 @@ public class HomeScreen {
     @FindBy(id = "overview-hero")
     WebElement homeScreenTitle_id;
 
+    @FindBy(id = "nav-btn-practice")
+    WebElement learningMaterial_id;
+
     public HomeScreen(WebDriver driver) {
         this.driver = driver;
     }
@@ -23,4 +26,8 @@ public class HomeScreen {
         homeScreenTitle_id.isDisplayed();
     }
 
+    public void clickOnLearningMaterial() {
+//        new WebDriverWait(driver, Duration.ofSeconds(10)).until(visibilityOf(learningMaterial_id));
+        learningMaterial_id.click();
+    }
 }
